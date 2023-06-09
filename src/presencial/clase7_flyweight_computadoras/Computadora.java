@@ -1,0 +1,56 @@
+package presencial.clase7_flyweight_computadoras;
+
+public class Computadora {
+    private Integer ram;
+    private Integer discoDuro;
+    private String id;
+    private static Integer contador = 0;
+
+    public Computadora(Integer ram, Integer discoDuro, String id) {
+        this.ram = ram;
+        this.discoDuro = discoDuro;
+        this.id = id; //No es un Id como tal sino como el modelo que ayuda identificar las computadoras iguales
+        contador++;
+    }
+
+    public Integer getRam() {
+        return ram;
+    }
+
+    public void setRam(Integer ram) {
+        this.ram = ram;
+    }
+
+    public Integer getDiscoDuro() {
+        return discoDuro;
+    }
+
+    public void setDiscoDuro(Integer discoDuro) {
+        this.discoDuro = discoDuro;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public static Integer getContador() {
+        return contador;
+    }
+
+    public static void setContador(Integer contador) {
+        Computadora.contador = contador;
+    }
+
+    @Override
+    public String toString() {
+        return "Computadora{" +
+                "ram=" + ram +
+                ", discoDuro=" + discoDuro +
+                ", id='" + id + '\'' +
+                '}';
+    }
+}
